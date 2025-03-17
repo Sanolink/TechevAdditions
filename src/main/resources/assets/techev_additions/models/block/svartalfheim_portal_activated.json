@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "techev_additions:block/svartalfheim_portal_activated"
+  }
+}

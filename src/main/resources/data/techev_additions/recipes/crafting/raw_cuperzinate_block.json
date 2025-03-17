@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "techev_additions:raw_cuperzinate"
+    }
+  },
+  "result": {
+    "item": "techev_additions:raw_cuperzinate_block"
+  }
+}

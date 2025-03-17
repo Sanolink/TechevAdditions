@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "techev_additions:raw_cuperzinate_block"
+    }
+  ],
+  "result": {
+    "item": "techev_additions:raw_cuperzinate",
+    "count": 9
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "block.villager_bell.use": {
+    "subtitle": "sounds.techev_additions.block.villager_bell.use",
+    "sounds": [
+      "techev_additions:block.villager_bell.use"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "item.techev_additions.techevium": "Techevium",
+    "item.techev_additions.raw_auricargentum": "Raw Auricargentum",
+    "item.techev_additions.raw_cuperzinate": "Raw Cuperzinate",
+    "item.techev_additions.raw_leadosnite": "Raw Leadosnite",
+    "item.techev_additions.raw_uratinumal": "Raw Uratinumal",
+
+
+    "block.techev_additions.raw_leadosnite_block": "Raw Leadosnite Block",
+    "block.techev_additions.raw_auricargentum_block": "Raw Auricargentum Block",
+    "block.techev_additions.raw_cuperzinate_block": "Raw Cuperzinate Block",
+    "block.techev_additions.raw_uratinumal_block": "Raw Uratinumal Block",
+    "block.techev_additions.villager_bell": "Villager Bell",
+    "block.techev_additions.svartalfheim_portal": "Dark Elven Gateway Core",
+
+    "itemGroup.techev_tab": "TechEv Additions"
+}
