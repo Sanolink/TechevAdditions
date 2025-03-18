@@ -217,11 +217,11 @@ jar {
     manifest {
         attributes([
                 "Specification-Title"     : "techev_additions",
-                "Specification-Vendor"    : "techev_additions",
-                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Specification-Vendor"    : "SanoLink",
+                "Specification-Version"   : project.version, // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
-                "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "techev_additions",
+                "Implementation-Version"  : project.version,
+                "Implementation-Vendor"   : "SanoLink",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
