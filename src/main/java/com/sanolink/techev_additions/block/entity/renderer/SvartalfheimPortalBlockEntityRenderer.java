@@ -5,17 +5,20 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Matrix3f;
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Vector3f;
+import com.sanolink.techev_additions.TechevAdditions;
 import com.sanolink.techev_additions.block.entity.SvartalfheimPortalBlockEntity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.inventory.InventoryMenu;
 import org.jetbrains.annotations.NotNull;
 import vazkii.botania.api.state.BotaniaStateProperties;
 import vazkii.botania.api.state.enums.AlfheimPortalState;
 import vazkii.botania.client.core.handler.ClientTickHandler;
-import vazkii.botania.client.core.handler.MiscellaneousModels;
 
 public class SvartalfheimPortalBlockEntityRenderer implements BlockEntityRenderer<SvartalfheimPortalBlockEntity> {
 
@@ -28,7 +31,7 @@ public class SvartalfheimPortalBlockEntityRenderer implements BlockEntityRendere
             return;
         }
 
-        float alpha = (float) Math.min(1F, (Math.sin((ClientTickHandler.ticksInGame + f) / 8D) + 1D) / 7D + 0.6D) * (Math.min(60, portal.ticksOpen) / 60F) * 0.5F;
+        float alpha = (float) Math.min(1F, (Math.sin((ClientTickHandler.ticksInGame + f) / 8D) + 1D) / 5D + 0.8D) * (Math.min(60, portal.ticksOpen) / 60F) * 0.8F;
 
         ms.pushPose();
         if (state == AlfheimPortalState.ON_X) {
@@ -37,7 +40,8 @@ public class SvartalfheimPortalBlockEntityRenderer implements BlockEntityRendere
         } else {
             ms.translate(-1, 1, 0.75);
         }
-        renderIcon(ms, buffers, MiscellaneousModels.INSTANCE.alfPortalTex.sprite(), 0, 0, 3, 3, alpha, overlay);
+        TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(new ResourceLocation(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl"));
+        renderIcon(ms, buffers, sprite, 0, 0, 3, 3, alpha, overlay);
         ms.popPose();
 
         ms.pushPose();
@@ -48,7 +52,7 @@ public class SvartalfheimPortalBlockEntityRenderer implements BlockEntityRendere
             ms.translate(2, 1, 0.25);
         }
         ms.mulPose(Vector3f.YP.rotationDegrees(180));
-        renderIcon(ms, buffers, MiscellaneousModels.INSTANCE.alfPortalTex.sprite(), 0, 0, 3, 3, alpha, overlay);
+        renderIcon(ms, buffers, sprite, 0, 0, 3, 3, alpha, overlay);
         ms.popPose();
     }
 

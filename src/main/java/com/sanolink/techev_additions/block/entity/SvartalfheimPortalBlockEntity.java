@@ -2,7 +2,9 @@ package com.sanolink.techev_additions.block.entity;
 
 import com.google.common.base.Suppliers;
 import com.sanolink.techev_additions.block.TechevBlocks;
-import com.sanolink.techev_additions.mixin.PylonBlockEntityMixin;
+import com.sanolink.techev_additions.mixin.IPylonBlockEntityMixin;
+import com.sanolink.techev_additions.recipes.DarkElvenTradeRecipe;
+import com.sanolink.techev_additions.recipes.TechevRecipeTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
@@ -28,7 +30,6 @@ import net.minecraft.world.phys.AABB;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vazkii.botania.api.block.Wandable;
-import vazkii.botania.api.recipe.ElvenTradeRecipe;
 import vazkii.botania.api.state.BotaniaStateProperties;
 import vazkii.botania.api.state.enums.AlfheimPortalState;
 import vazkii.botania.client.fx.WispParticleData;
@@ -39,7 +40,6 @@ import vazkii.botania.common.block.block_entity.BotaniaBlockEntity;
 import vazkii.botania.common.block.block_entity.PylonBlockEntity;
 import vazkii.botania.common.block.block_entity.mana.ManaPoolBlockEntity;
 import vazkii.botania.common.block.mana.ManaPoolBlock;
-import vazkii.botania.common.crafting.BotaniaRecipeTypes;
 import vazkii.botania.common.lib.BotaniaTags;
 import vazkii.botania.xplat.BotaniaConfig;
 import vazkii.botania.xplat.XplatAbstractions;
@@ -105,7 +105,7 @@ public class SvartalfheimPortalBlockEntity extends BotaniaBlockEntity implements
     private static final String TAG_TICKS_SINCE_LAST_ITEM = "ticksSinceLastItem";
     private static final String TAG_STACK_COUNT = "stackCount";
     private static final String TAG_STACK = "portalStack";
-    public static final String TAG_PORTAL_FLAG = "_elvenPortal";
+    public static final String TAG_PORTAL_FLAG = "_darkelvenPortal";
 
     private final List<ItemStack> stacksIn = new ArrayList<>();
 
@@ -200,8 +200,8 @@ public class SvartalfheimPortalBlockEntity extends BotaniaBlockEntity implements
 
     private boolean validateItemUsage(ItemEntity entity) {
         ItemStack inputStack = entity.getItem();
-        for (Recipe<?> recipe : BotaniaRecipeTypes.getRecipes(level, BotaniaRecipeTypes.ELVEN_TRADE_TYPE).values()) {
-            if (recipe instanceof ElvenTradeRecipe tradeRecipe && tradeRecipe.containsItem(inputStack)) {
+        for (Recipe<?> recipe : TechevRecipeTypes.getRecipes(level, TechevRecipeTypes.DARK_ELVEN_TRADE_TYPE.get()).values()) {
+            if (recipe instanceof DarkElvenTradeRecipe tradeRecipe && tradeRecipe.containsItem(inputStack)) {
                 return true;
             }
         }
@@ -261,7 +261,7 @@ public class SvartalfheimPortalBlockEntity extends BotaniaBlockEntity implements
         double dz = state == AlfheimPortalState.ON_Z ? 0 : dh;
 
         float motionMul = 0.2F;
-        WispParticleData data = WispParticleData.wisp((float) (Math.random() * 0.15F + 0.1F), (float) (Math.random() * 0.25F), (float) (Math.random() * 0.5F + 0.5F), (float) (Math.random() * 0.25F));
+        WispParticleData data = WispParticleData.wisp((float) (Math.random() * 0.15F + 0.1F), (float) (Math.random() * 0.2F + 0.8F), (float) (Math.random() * 0.5F), (float) (Math.random() * 0.5F + 0.5F));
         level.addParticle(data, getBlockPos().getX() + dx, getBlockPos().getY() + dy, getBlockPos().getZ() + dz, (float) (Math.random() - 0.5F) * motionMul, (float) (Math.random() - 0.5F) * motionMul, (float) (Math.random() - 0.5F) * motionMul);
     }
 
@@ -300,17 +300,17 @@ public class SvartalfheimPortalBlockEntity extends BotaniaBlockEntity implements
     }
 
     @SuppressWarnings("unchecked")
-    public static Collection<ElvenTradeRecipe> elvenTradeRecipes(Level world) {
+    public static Collection<DarkElvenTradeRecipe> darkelvenTradeRecipes(Level world) {
         // By virtue of IRecipeType's type parameter,
-        // we know all the recipes in the map must be ElvenTradeRecipe.
+        // we know all the recipes in the map must be DarkElvenTradeRecipe.
         // However, vanilla's signature on this method is dumb (should be Map<ResourceLocation, T>)
-        return (Collection<ElvenTradeRecipe>) (Collection<?>) BotaniaRecipeTypes.getRecipes(world, BotaniaRecipeTypes.ELVEN_TRADE_TYPE).values();
+        return (Collection<DarkElvenTradeRecipe>) (Collection<?>) TechevRecipeTypes.getRecipes(world, TechevRecipeTypes.DARK_ELVEN_TRADE_TYPE.get()).values();
     }
 
     private void resolveRecipes() {
         List<BlockPos> pylons = locatePylons();
-        for (Recipe<?> r : BotaniaRecipeTypes.getRecipes(level, BotaniaRecipeTypes.ELVEN_TRADE_TYPE).values()) {
-            if (!(r instanceof ElvenTradeRecipe recipe)) {
+        for (Recipe<?> r : TechevRecipeTypes.getRecipes(level, TechevRecipeTypes.DARK_ELVEN_TRADE_TYPE.get()).values()) {
+            if (!(r instanceof DarkElvenTradeRecipe recipe)) {
                 continue;
             }
             Optional<List<ItemStack>> match = recipe.match(stacksIn);
@@ -392,7 +392,7 @@ public class SvartalfheimPortalBlockEntity extends BotaniaBlockEntity implements
 
         return BlockPos.betweenClosedStream(getBlockPos().offset(-range, -range, -range), getBlockPos().offset(range, range, range))
                 .filter(level::hasChunkAt)
-                .filter(p -> level.getBlockState(p).is(BotaniaBlocks.naturaPylon) && level.getBlockState(p.below()).getBlock() instanceof ManaPoolBlock)
+                .filter(p -> level.getBlockState(p).is(BotaniaBlocks.gaiaPylon) && level.getBlockState(p.below()).getBlock() instanceof ManaPoolBlock)
                 .map(BlockPos::immutable)
                 .collect(Collectors.toList());
     }
@@ -406,8 +406,8 @@ public class SvartalfheimPortalBlockEntity extends BotaniaBlockEntity implements
         for (BlockPos pos : pylons) {
             BlockEntity tile = level.getBlockEntity(pos);
             if (tile instanceof PylonBlockEntity pylon) {
-                ((PylonBlockEntityMixin) pylon).setActivated(true);
-                ((PylonBlockEntityMixin) pylon).setCenterPos(getBlockPos());
+                ((IPylonBlockEntityMixin) pylon).setActivated(true);
+                ((IPylonBlockEntityMixin) pylon).setCenterPos(getBlockPos());
             }
         }
 
@@ -431,8 +431,8 @@ public class SvartalfheimPortalBlockEntity extends BotaniaBlockEntity implements
         for (BlockPos pos : pylons) {
             BlockEntity tile = level.getBlockEntity(pos);
             if (tile instanceof PylonBlockEntity pylon) {
-                ((PylonBlockEntityMixin) pylon).setActivated(true);
-                ((PylonBlockEntityMixin) pylon).setCenterPos(getBlockPos());
+                ((IPylonBlockEntityMixin) pylon).setActivated(true);
+                ((IPylonBlockEntityMixin) pylon).setCenterPos(getBlockPos());
             }
 
             tile = level.getBlockEntity(pos.below());

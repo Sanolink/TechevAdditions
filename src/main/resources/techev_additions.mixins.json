@@ -4,6 +4,7 @@
   "package": "com.sanolink.techev_additions.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "IPylonBlockEntityMixin",
     "PylonBlockEntityMixin",
     "BlockEntityConstantsMixin"
   ],

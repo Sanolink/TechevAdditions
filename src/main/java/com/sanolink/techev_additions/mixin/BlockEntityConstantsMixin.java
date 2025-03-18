@@ -21,7 +21,7 @@ public class BlockEntityConstantsMixin {
     @Shadow @Mutable
     public static Set<BlockEntityType<?>> SELF_WANDADBLE_BES;
 
-    @Inject(method = "<clinit>", at = @At("TAIL"))
+    @Inject(method = "<clinit>", at = @At(value = "TAIL"))
     private static void modifySelfWandadbleBes(CallbackInfo ci) {
         SELF_WANDADBLE_BES = new ImmutableSet.Builder<BlockEntityType<?>>()
                 .addAll(SELF_WANDADBLE_BES)

@@ -6,6 +6,7 @@ import com.sanolink.techev_additions.item.TechevItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -16,8 +17,6 @@ import net.minecraftforge.registries.RegistryObject;
 import vazkii.botania.api.state.BotaniaStateProperties;
 import vazkii.botania.api.state.enums.AlfheimPortalState;
 
-
-import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 public class TechevBlocks {
@@ -35,7 +34,7 @@ public class TechevBlocks {
     public static final RegistryObject<Block> VILLAGER_BELL = registerBlock("villager_bell",
             () -> new VillagerBellBlock(BlockBehaviour.Properties.copy(Blocks.BELL)), TechevCreativeModeTab.TECHEV_TAB);
 
-    public static final RegistryObject<Block> SVARTALFPORTAL = registerBlock("svartalfheim_portal",
+    public static final RegistryObject<Block> SVARTALFPORTAL = registerEpicBlock("svartalfheim_portal",
             () -> new SvartalfheimPortalBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(10).sound(SoundType.WOOD)
                     .lightLevel(s -> s.getValue(BotaniaStateProperties.ALFPORTAL_STATE) != AlfheimPortalState.OFF ? 15 : 0)), TechevCreativeModeTab.TECHEV_TAB);
 
@@ -45,8 +44,18 @@ public class TechevBlocks {
         return toReturn;
     }
 
+    private static <T extends Block> RegistryObject<T> registerEpicBlock(String name, Supplier<T> block, CreativeModeTab tab) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerEpicBlockItem(name, toReturn, tab);
+        return toReturn;
+    }
+
     private static <T extends  Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
         return TechevItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    }
+
+    private static <T extends  Block> RegistryObject<Item> registerEpicBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
+        return TechevItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab).rarity(Rarity.EPIC)));
     }
 
     public static void register(IEventBus eventBus){

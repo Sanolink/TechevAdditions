@@ -20,7 +20,6 @@ import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.world.level.block.entity.BellBlockEntity;
 
 public class VillagerBellRenderer implements BlockEntityRenderer<VillagerBellBlockEntity> {
     public static final Material BELL_RESOURCE_LOCATION;

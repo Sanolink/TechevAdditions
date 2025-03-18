@@ -1,7 +1,6 @@
 package com.sanolink.techev_additions.event;
 
 import com.sanolink.techev_additions.TechevAdditions;
-import com.sanolink.techev_additions.block.TechevBlocks;
 import com.sanolink.techev_additions.block.entity.TechevBlockEntities;
 import com.sanolink.techev_additions.block.entity.renderer.SvartalfheimPortalBlockEntityRenderer;
 import com.sanolink.techev_additions.block.entity.renderer.VillagerBellRenderer;

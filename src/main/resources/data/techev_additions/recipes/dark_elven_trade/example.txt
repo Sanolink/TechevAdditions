@@ -1,0 +1,13 @@
+{
+  "type": "techev_additions:dark_elven_trade",
+  "ingredients": [
+    {
+      "item": "botania:mana_pearl"
+    }
+  ],
+  "output": [
+    {
+      "item": "minecraft:oak_planks"
+    }
+  ]
+}
