@@ -3,11 +3,12 @@ package com.sanolink.techev_additions.event;
 import com.sanolink.techev_additions.TechevAdditions;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class TextureEventHandler {
     @SubscribeEvent
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
