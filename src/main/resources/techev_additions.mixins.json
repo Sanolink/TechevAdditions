@@ -6,7 +6,8 @@
   "mixins": [
     "IPylonBlockEntityMixin",
     "PylonBlockEntityMixin",
-    "BlockEntityConstantsMixin"
+    "BlockEntityConstantsMixin",
+    "MythicBotanyMixin"
   ],
   "client": [],
   "server": [],
