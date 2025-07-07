@@ -6,7 +6,7 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = '1.19.2-1.1.0'
+version = '1.19.2-1.2.0'
 group = 'fr.sanolink.techev_additions' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'techev_additions'
 
@@ -189,6 +189,10 @@ dependencies {
 
     // Sand Box
     implementation fg.deobf("curse.maven:sand_box-653732:4029683")
+
+    // Twilight Forest
+    implementation fg.deobf("teamtwilight:twilightforest:${twilight_version}:universal")
+    implementation fg.deobf("teamtwilight:twilightforest:${twilight_version}:sources")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
