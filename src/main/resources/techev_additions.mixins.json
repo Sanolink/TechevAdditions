@@ -5,11 +5,12 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "techev_additions.refmap.json",
   "mixins": [
-    "IPylonBlockEntityMixin",
-    "PylonBlockEntityMixin",
     "BlockEntityConstantsMixin",
+    "FieryBlockMixin",
+    "FluidLaserBaseTileMixin",
+    "IPylonBlockEntityMixin",
     "MythicBotanyMixin",
-    "FieryBlockMixin"
+    "PylonBlockEntityMixin"
   ],
   "client": [],
   "server": [],
