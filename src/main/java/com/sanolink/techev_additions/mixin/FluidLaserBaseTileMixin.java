@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(FluidLaserBaseTile.class)
 public class FluidLaserBaseTileMixin {
 
-    @Redirect(method = "lambda$onWork$10", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"), remap = false)
+    @Redirect(method = "lambda$onWork$10", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
     private boolean cancelDamage(LivingEntity entity, DamageSource source, float amount) {
         return entity.hurt(source, 0.0F);
     }
