@@ -24,7 +24,7 @@ import java.util.List;
 public class JEITechevAdditionsPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(TechevAdditions.MOD_ID, "jei_plugin");
+        return ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "jei_plugin");
     }
 
     @Override

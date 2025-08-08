@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface IDarkElvenTradeRecipe extends Recipe<Container> {
-    ResourceLocation TYPE_ID = new ResourceLocation(TechevAdditions.MOD_ID, "dark_elven_trade");
+    ResourceLocation TYPE_ID = ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "dark_elven_trade");
 
     /**
      * Attempts to match the recipe

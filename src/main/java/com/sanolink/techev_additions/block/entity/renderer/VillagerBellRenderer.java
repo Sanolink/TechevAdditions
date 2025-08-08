@@ -26,10 +26,10 @@ import net.minecraft.util.Mth;
 public class VillagerBellRenderer implements BlockEntityRenderer<VillagerBellBlockEntity> {
 
     public static final ModelLayerLocation VILLAGER_BELL_LAYER =
-            new ModelLayerLocation(new ResourceLocation(TechevAdditions.MOD_ID, "villager_bell"), "main");
+            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "villager_bell"), "main");
 
     private static final ResourceLocation VILLAGER_BELL_TEXTURE =
-            new ResourceLocation(TechevAdditions.MOD_ID, "textures/entity/villager_bell/villager_bell_body.png");
+            ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "textures/entity/villager_bell/villager_bell_body.png");
 
     private static final String VILLAGER_BELL_BODY = "villager_bell_body";
     private final ModelPart villager_bellBody;

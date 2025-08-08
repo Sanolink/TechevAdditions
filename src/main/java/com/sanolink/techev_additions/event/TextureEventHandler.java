@@ -13,7 +13,7 @@ public class TextureEventHandler {
     @SubscribeEvent
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
         if (event.getAtlas().location().equals(InventoryMenu.BLOCK_ATLAS)) {
-            event.addSprite(new ResourceLocation(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl"));
+            event.addSprite(ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl"));
         }
     }
 }

@@ -40,7 +40,7 @@ public class SvartalfheimPortalBlockEntityRenderer implements BlockEntityRendere
         } else {
             ms.translate(-1, 1, 0.75);
         }
-        TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(new ResourceLocation(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl"));
+        TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl"));
         renderIcon(ms, buffers, sprite, 0, 0, 3, 3, alpha, overlay);
         ms.popPose();
 

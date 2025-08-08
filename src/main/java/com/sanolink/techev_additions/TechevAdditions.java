@@ -25,9 +25,9 @@ public class TechevAdditions
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final String MOD_ID = "techev_additions";
 
-    public TechevAdditions()
+    public TechevAdditions(FMLJavaModLoadingContext context)
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = context.getModEventBus();
 
         TechevSounds.register(modEventBus);
         TechevItems.register(modEventBus);
