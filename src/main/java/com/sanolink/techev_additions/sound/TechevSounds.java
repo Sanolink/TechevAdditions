@@ -15,7 +15,7 @@ public class TechevSounds {
     public static final RegistryObject<SoundEvent> VILLAGER_BELL_BLOCK = registerSoundEvent("block.villager_bell.use");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
-        ResourceLocation id = new ResourceLocation(TechevAdditions.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, name);
         return SOUND_EVENTS.register(name, () -> new SoundEvent(id));
     }
     public static void register(IEventBus eventBus) {

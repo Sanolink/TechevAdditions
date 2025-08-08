@@ -16,7 +16,7 @@ public class TechevItems {
     
     public static final RegistryObject<Item> TECHEVIUM = ITEMS.register("techevium", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> TELLURITE= ITEMS.register("tellurite", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB)));
-    public static final RegistryObject<Item> CHROMATIC = ITEMS.register("chromatic", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB)));
+    public static final RegistryObject<Item> CHROMATIC = ITEMS.register("chromatic", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> EVOLIUM = ITEMS.register("evolium", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB)));
     public static final RegistryObject<Item> RAW_AURICARGENTUM = ITEMS.register("raw_auricargentum", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB)));
     public static final RegistryObject<Item> RAW_CUPERZINATE = ITEMS.register("raw_cuperzinate", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB)));

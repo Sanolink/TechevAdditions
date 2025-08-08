@@ -16,4 +16,9 @@ public class ModEventBusClientEvents {
         event.registerBlockEntityRenderer(TechevBlockEntities.VILLAGER_BELL_BE.get(), VillagerBellRenderer::new);
         event.registerBlockEntityRenderer(TechevBlockEntities.SVARTALFPORTAL_BE.get(), SvartalfheimPortalBlockEntityRenderer::new);
     }
+
+    @SubscribeEvent
+    public static void registerLayerDefinition(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(VillagerBellRenderer.VILLAGER_BELL_LAYER, VillagerBellRenderer::createBodyLayer);
+    }
 }

@@ -18,7 +18,7 @@ import java.util.Set;
 public class BlockEntityConstantsMixin {
 
     @Final
-    @Shadow @Mutable
+    @Shadow(remap = false) @Mutable
     public static Set<BlockEntityType<?>> SELF_WANDADBLE_BES;
 
     @Inject(method = "<clinit>", at = @At(value = "TAIL"))

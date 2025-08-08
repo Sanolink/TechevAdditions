@@ -38,15 +38,15 @@ public class DarkElvenTradeRecipeCategory implements IRecipeCategory<DarkElvenTr
     public DarkElvenTradeRecipeCategory(IGuiHelper guiHelper) {
         System.out.println("TEST");
         System.out.println(Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS)
-                .apply(new ResourceLocation(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl")));
+                .apply(ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl")));
         System.out.println("TEST2");
-        ResourceLocation testLoc = new ResourceLocation(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl");
+        ResourceLocation testLoc = ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl");
         System.out.println("Testing ResourceLocation: " + testLoc);
         System.out.println("FINTEST");
 
         localizedName = Component.translatable("techev_additions.nei.darkelvenTrade");
         background = guiHelper.createBlankDrawable(145, 95);
-        overlay = guiHelper.createDrawable(new ResourceLocation(TechevAdditions.MOD_ID, "textures/gui/dark_elven_trade_overlay.png"), 0, 15, 140, 90);
+        overlay = guiHelper.createDrawable(ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "textures/gui/dark_elven_trade_overlay.png"), 0, 15, 140, 90);
         icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(TechevBlocks.SVARTALFPORTAL.get()));
     }
 
@@ -81,7 +81,7 @@ public class DarkElvenTradeRecipeCategory implements IRecipeCategory<DarkElvenTr
         RenderSystem.disableBlend();
 
         RenderSystem.setShaderTexture(0, InventoryMenu.BLOCK_ATLAS);
-        TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(new ResourceLocation(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl"));
+        TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(ResourceLocation.fromNamespaceAndPath(TechevAdditions.MOD_ID, "block/svartalfheim_portal_swirl"));
         MultiBufferSource.BufferSource immediate = Minecraft.getInstance().renderBuffers().bufferSource();
         VertexConsumer v = immediate.getBuffer(RenderType.solid());
         int startX = 22;
