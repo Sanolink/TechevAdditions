@@ -6,7 +6,7 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = '1.19.2-1.2.0'
+version = '1.19.2-1.2.2'
 group = 'fr.sanolink.techev_additions' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'techev_additions'
 
@@ -199,7 +199,6 @@ dependencies {
 
     // Titanium
     implementation fg.deobf("curse.maven:titanium-287342:5356458")
-
     // Jade
     //runtimeOnly(fg.deobf("curse.maven:jade-324717:4914105"))
 
