@@ -1,4 +1,4 @@
-package com.sanolink.techev_additions.mixin;
+package com.sanolink.techev_additions.mixin.twilightforest;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;

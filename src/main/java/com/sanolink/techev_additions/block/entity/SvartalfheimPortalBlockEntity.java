@@ -2,7 +2,7 @@ package com.sanolink.techev_additions.block.entity;
 
 import com.google.common.base.Suppliers;
 import com.sanolink.techev_additions.block.TechevBlocks;
-import com.sanolink.techev_additions.mixin.IPylonBlockEntityMixin;
+import com.sanolink.techev_additions.mixin.botania.IPylonBlockEntityMixin;
 import com.sanolink.techev_additions.recipes.DarkElvenTradeRecipe;
 import com.sanolink.techev_additions.recipes.TechevRecipeTypes;
 import net.minecraft.core.BlockPos;

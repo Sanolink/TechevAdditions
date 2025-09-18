@@ -1,4 +1,4 @@
-package com.sanolink.techev_additions.mixin;
+package com.sanolink.techev_additions.mixin.industrialforegoing;
 
 import com.buuz135.industrial.block.resourceproduction.tile.FluidLaserBaseTile;
 
