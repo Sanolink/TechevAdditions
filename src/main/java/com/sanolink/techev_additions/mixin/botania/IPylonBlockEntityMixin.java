@@ -1,4 +1,4 @@
-package com.sanolink.techev_additions.mixin;
+package com.sanolink.techev_additions.mixin.botania;
 
 import net.minecraft.core.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;

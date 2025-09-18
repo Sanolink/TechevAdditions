@@ -1,4 +1,4 @@
-package com.sanolink.techev_additions.mixin;
+package com.sanolink.techev_additions.mixin.botania;
 
 import com.google.common.collect.ImmutableSet;
 import com.sanolink.techev_additions.block.entity.TechevBlockEntities;
