@@ -1,4 +1,4 @@
-package com.sanolink.techev_additions.mixin;
+package com.sanolink.techev_additions.mixin.regeneration;
 
 import com.sanolink.techev_additions.TechevAdditionsConfig;
 import net.minecraft.client.gui.components.ImageButton;
