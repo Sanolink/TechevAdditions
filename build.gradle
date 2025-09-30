@@ -199,6 +199,7 @@ dependencies {
 
     // Titanium
     implementation fg.deobf("curse.maven:titanium-287342:5356458")
+
     // Jade
     //runtimeOnly(fg.deobf("curse.maven:jade-324717:4914105"))
 

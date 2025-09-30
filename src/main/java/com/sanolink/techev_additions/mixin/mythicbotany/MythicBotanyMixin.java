@@ -1,4 +1,4 @@
-package com.sanolink.techev_additions.mixin;
+package com.sanolink.techev_additions.mixin.mythicbotany;
 
 import mythicbotany.EventListener;
 import net.minecraft.world.level.block.entity.BlockEntity;
