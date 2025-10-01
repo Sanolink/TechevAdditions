@@ -1,5 +1,5 @@
 package com.sanolink.techev_additions.mixin.regeneration;
-
+/*
 import com.sanolink.techev_additions.TechevAdditionsConfig;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.screens.Screen;
@@ -25,3 +25,4 @@ public abstract class InventoryScreenMixin {
         }
     }
 }
+*/

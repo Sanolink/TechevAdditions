@@ -1,7 +1,7 @@
 package com.sanolink.techev_additions;
 
 import net.minecraftforge.common.ForgeConfigSpec;
-
+/*
 public class TechevAdditionsConfig {
 
     public static ForgeConfigSpec.IntValue regenButtonX;
@@ -26,3 +26,4 @@ public class TechevAdditionsConfig {
         CLIENT_CONFIG = builder.build();
     }
 }
+*/

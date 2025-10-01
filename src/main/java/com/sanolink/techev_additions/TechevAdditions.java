@@ -40,7 +40,7 @@ public class TechevAdditions
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        context.registerConfig(ModConfig.Type.CLIENT, TechevAdditionsConfig.CLIENT_CONFIG);
+        // context.registerConfig(ModConfig.Type.CLIENT, TechevAdditionsConfig.CLIENT_CONFIG);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
