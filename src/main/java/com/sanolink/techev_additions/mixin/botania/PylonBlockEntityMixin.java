@@ -37,24 +37,26 @@ public abstract class PylonBlockEntityMixin {
                 ((IPylonBlockEntityMixin) self).setActivated(false);
             }
             if (((IPylonBlockEntityMixin) self).getActivated()) {
-                if (BotaniaConfig.client().elfPortalParticlesEnabled()) {
-                    double worldTime = ((IPylonBlockEntityMixin) self).getTicks();
-                    worldTime += new Random(worldPosition.hashCode()).nextInt(1000);
-                    worldTime /= 5;
+                if (level.isClientSide) {
+                    if (BotaniaConfig.client().elfPortalParticlesEnabled()) {
+                        double worldTime = ((IPylonBlockEntityMixin) self).getTicks();
+                        worldTime += new Random(worldPosition.hashCode()).nextInt(1000);
+                        worldTime /= 5;
 
-                    float r = 0.75F + (float) Math.random() * 0.05F;
-                    double x = worldPosition.getX() + 0.5 + Math.cos(worldTime) * r;
-                    double z = worldPosition.getZ() + 0.5 + Math.sin(worldTime) * r;
+                        float r = 0.75F + (float) Math.random() * 0.05F;
+                        double x = worldPosition.getX() + 0.5 + Math.cos(worldTime) * r;
+                        double z = worldPosition.getZ() + 0.5 + Math.sin(worldTime) * r;
 
-                    Vec3 ourCoords = new Vec3(x, worldPosition.getY() + 0.25, z);
-                    centerBlock = centerBlock.subtract(0, 0.5, 0);
-                    Vec3 movementVector = centerBlock.subtract(ourCoords).normalize().scale(0.2);
+                        Vec3 ourCoords = new Vec3(x, worldPosition.getY() + 0.25, z);
+                        centerBlock = centerBlock.subtract(0, 0.5, 0);
+                        Vec3 movementVector = centerBlock.subtract(ourCoords).normalize().scale(0.2);
 
-                    WispParticleData data = WispParticleData.wisp(0.25F + (float) Math.random() * 0.1F, (float) Math.random() * 0.2F + 0.8F, (float) Math.random() * 0.5F, (float) Math.random() * 0.5F + 0.5F, 1);
-                    level.addParticle(data, x, worldPosition.getY() + 0.25, z, 0, -(-0.075F - (float) Math.random() * 0.015F), 0);
-                    if (level.random.nextInt(3) == 0) {
-                        WispParticleData data1 = WispParticleData.wisp(0.25F + (float) Math.random() * 0.1F, (float) Math.random() * 0.2F + 0.8F, (float) Math.random() * 0.5F, (float) Math.random() * 0.5F + 0.5F);
-                        level.addParticle(data1, x, worldPosition.getY() + 0.25, z, (float) movementVector.x, (float) movementVector.y, (float) movementVector.z);
+                        WispParticleData data = WispParticleData.wisp(0.25F + (float) Math.random() * 0.1F, (float) Math.random() * 0.2F + 0.8F, (float) Math.random() * 0.5F, (float) Math.random() * 0.5F + 0.5F, 1);
+                        level.addParticle(data, x, worldPosition.getY() + 0.25, z, 0, -(-0.075F - (float) Math.random() * 0.015F), 0);
+                        if (level.random.nextInt(3) == 0) {
+                            WispParticleData data1 = WispParticleData.wisp(0.25F + (float) Math.random() * 0.1F, (float) Math.random() * 0.2F + 0.8F, (float) Math.random() * 0.5F, (float) Math.random() * 0.5F + 0.5F);
+                            level.addParticle(data1, x, worldPosition.getY() + 0.25, z, (float) movementVector.x, (float) movementVector.y, (float) movementVector.z);
+                        }
                     }
                 }
             }
