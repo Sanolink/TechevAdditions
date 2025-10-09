@@ -136,8 +136,10 @@ public class SvartalfheimPortalBlockEntity extends BotaniaBlockEntity implements
 
         if (self.ticksOpen > 60) {
             self.ticksSinceLastItem++;
-            if (level.isClientSide && BotaniaConfig.client().elfPortalParticlesEnabled()) {
-                self.blockParticle(state);
+            if (level.isClientSide) {
+                if (BotaniaConfig.client().elfPortalParticlesEnabled()) {
+                    self.blockParticle(state);
+                }
             }
 
             List<ItemEntity> items = level.getEntitiesOfClass(ItemEntity.class, aabb);
