@@ -8,6 +8,7 @@
     "botania.BlockEntityConstantsMixin",
     "botania.IPylonBlockEntityMixin",
     "botania.PylonBlockEntityMixin",
+    "create.AirCurrentMixin",
     "industrialforegoing.FluidLaserBaseTileMixin",
     "industrialforegoing.ItemStackUtilsMixin",
     "industrialforegoing.JEICustomPluginMixin",
@@ -16,9 +17,11 @@
     "mythicbotany.MythicBotanyMixin",
     "twilightforest.FieryBlockMixin"
   ],
-  "client": [],
   "server": [],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "client": [
+    "create.AirFlowParticleMixin"
+  ]
 }
