@@ -200,6 +200,13 @@ dependencies {
     // Titanium
     implementation fg.deobf("curse.maven:titanium-287342:5356458")
 
+    // Create
+    implementation fg.deobf("curse.maven:create-328085:5797604")
+
+    // Create: Balanced Flight
+    implementation fg.deobf("curse.maven:create-balanced-flight-538560:4635837")
+    implementation fg.deobf("curse.maven:geckolib-388172:4407241")
+
     // Jade
     //runtimeOnly(fg.deobf("curse.maven:jade-324717:4914105"))
 
