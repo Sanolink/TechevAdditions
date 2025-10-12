@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "techev_additions.refmap.json",
   "mixins": [
+    "balancedflight.FlightControllerMixin",
     "botania.BlockEntityConstantsMixin",
     "botania.IPylonBlockEntityMixin",
     "botania.PylonBlockEntityMixin",

@@ -210,6 +210,10 @@ dependencies {
     implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${mc_version}:${flywheel_version}")
     compileOnly fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
 
+    // Create: Balanced Flight
+    implementation fg.deobf("curse.maven:create-balanced-flight-538560:4635837")
+    implementation fg.deobf("curse.maven:geckolib-388172:4407241")
+
     // Jade
     //runtimeOnly(fg.deobf("curse.maven:jade-324717:4914105"))
 
