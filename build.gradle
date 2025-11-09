@@ -214,6 +214,12 @@ dependencies {
     implementation fg.deobf("curse.maven:create-balanced-flight-538560:4635837")
     implementation fg.deobf("curse.maven:geckolib-388172:4407241")
 
+    // Applied Energistics 2
+    implementation fg.deobf("appeng:appliedenergistics2:12.1.1-alpha")
+
+    // AE Infinity Booster
+    implementation fg.deobf("curse.maven:aeinfinitybooster-559313:3940200")
+
     // Jade
     //runtimeOnly(fg.deobf("curse.maven:jade-324717:4914105"))
 

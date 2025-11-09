@@ -1,11 +1,11 @@
 package com.sanolink.techev_additions;
 
 import net.minecraftforge.common.ForgeConfigSpec;
-/*
+
 public class TechevAdditionsConfig {
 
-    public static ForgeConfigSpec.IntValue regenButtonX;
-    public static ForgeConfigSpec.IntValue regenButtonY;
+    public static ForgeConfigSpec.IntValue DIMENSION_CARD_DRAIN;
+    public static ForgeConfigSpec.IntValue INFINITY_CARD_DRAIN;
 
     public static final ForgeConfigSpec CLIENT_CONFIG;
 
@@ -14,16 +14,15 @@ public class TechevAdditionsConfig {
 
         builder.comment("Configuration for TechEv Additions").push("general");
 
-        regenButtonX = builder
-                .comment("X position of Regenerations button")
-                .defineInRange("regenButtonX", 51, 0, 500);
+        DIMENSION_CARD_DRAIN = builder
+                .comment("The amount of power the Dimension Card drains per tick")
+                .defineInRange("dimensionCardDrain", 100, 0, Integer.MAX_VALUE);
 
-        regenButtonY = builder
-                .comment("Y position of Regenerations button")
-                .defineInRange("regenButtonY", 34, 0, 500);
+        INFINITY_CARD_DRAIN = builder
+                .comment("The amount of power the Infinity Card drains per tick")
+                .defineInRange("infinityCardDrain", 50, 0, Integer.MAX_VALUE);
 
         builder.pop();
         CLIENT_CONFIG = builder.build();
     }
 }
-*/

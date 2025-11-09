@@ -5,6 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "techev_additions.refmap.json",
   "mixins": [
+    "ae2.WirelessBlockEntityMixin",
+    "ae2.WirelessMenuMixin",
     "balancedflight.FlightControllerMixin",
     "botania.BlockEntityConstantsMixin",
     "botania.IPylonBlockEntityMixin",
