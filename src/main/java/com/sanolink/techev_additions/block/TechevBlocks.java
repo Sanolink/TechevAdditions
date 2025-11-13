@@ -24,18 +24,18 @@ public class TechevBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TechevAdditions.MOD_ID);
 
     public static final RegistryObject<Block> RAW_AURICARGENTUM_BLOCK = registerBlock("raw_auricargentum_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.TUFF).strength(3f)), TechevCreativeModeTab.TECHEV_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.TUFF).strength(3f).requiresCorrectToolForDrops()), TechevCreativeModeTab.TECHEV_TAB);
     public static final RegistryObject<Block> RAW_CUPERZINATE_BLOCK = registerBlock("raw_cuperzinate_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.TUFF).strength(3f)), TechevCreativeModeTab.TECHEV_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.TUFF).strength(3f).requiresCorrectToolForDrops()), TechevCreativeModeTab.TECHEV_TAB);
     public static final RegistryObject<Block> RAW_LEADOSNITE_BLOCK = registerBlock("raw_leadosnite_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.TUFF).strength(3f)), TechevCreativeModeTab.TECHEV_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.TUFF).strength(3f).requiresCorrectToolForDrops()), TechevCreativeModeTab.TECHEV_TAB);
     public static final RegistryObject<Block> RAW_URATINUMAL_BLOCK = registerBlock("raw_uratinumal_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.TUFF).strength(3f)), TechevCreativeModeTab.TECHEV_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.TUFF).strength(3f).requiresCorrectToolForDrops()), TechevCreativeModeTab.TECHEV_TAB);
     public static final RegistryObject<Block> VILLAGER_BELL = registerBlock("villager_bell",
             () -> new VillagerBellBlock(BlockBehaviour.Properties.copy(Blocks.BELL)), TechevCreativeModeTab.TECHEV_TAB);
 
     public static final RegistryObject<Block> SVARTALFPORTAL = registerEpicBlock("svartalfheim_portal",
-            () -> new SvartalfheimPortalBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(10).sound(SoundType.WOOD)
+            () -> new SvartalfheimPortalBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(10).requiresCorrectToolForDrops().sound(SoundType.WOOD)
                     .lightLevel(s -> s.getValue(BotaniaStateProperties.ALFPORTAL_STATE) != AlfheimPortalState.OFF ? 15 : 0)), TechevCreativeModeTab.TECHEV_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
