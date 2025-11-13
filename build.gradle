@@ -6,7 +6,7 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = '1.19.2-1.2.2b'
+version = '1.19.2-1.2.3'
 group = 'fr.sanolink.techev_additions' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'techev_additions'
 
