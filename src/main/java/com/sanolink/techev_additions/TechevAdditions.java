@@ -7,11 +7,14 @@ import com.sanolink.techev_additions.item.TechevItems;
 
 import com.sanolink.techev_additions.block.TechevBlocks;
 import com.sanolink.techev_additions.recipes.TechevRecipeTypes;
+import com.sanolink.techev_additions.recipes.create.TechevCreateRecipeTypes;
+import com.sanolink.techev_additions.recipes.create.TechevFanProcessingTypes;
 import com.sanolink.techev_additions.sound.TechevSounds;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -33,12 +36,15 @@ public class TechevAdditions
         TechevItems.register(modEventBus);
         TechevBlocks.register(modEventBus);
         TechevBlockEntities.register(modEventBus);
+        TechevCreateRecipeTypes.values();
         TechevRecipeTypes.register(modEventBus);
-        
+
+        TechevFanProcessingTypes.register();
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-
+        context.registerConfig(ModConfig.Type.CLIENT, TechevAdditionsConfig.CLIENT_CONFIG);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

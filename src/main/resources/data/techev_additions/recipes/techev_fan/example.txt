@@ -1,0 +1,23 @@
+{
+  "type": "techev_additions:techev_fan",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "catalysts": [
+    {
+      "fluid": "create:chocolate",
+      "color": "#A46644"
+    },
+    {
+      "block": "minecraft:yellow_candle",
+      "color": "#DED234"
+    }
+  ]
+}
