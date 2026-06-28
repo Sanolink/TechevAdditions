@@ -7,7 +7,7 @@ public class TechevAdditionsConfig {
     public static ForgeConfigSpec.IntValue DIMENSION_CARD_DRAIN;
     public static ForgeConfigSpec.IntValue INFINITY_CARD_DRAIN;
 
-    public static final ForgeConfigSpec CLIENT_CONFIG;
+    public static final ForgeConfigSpec SERVER_CONFIG;
 
     static {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
@@ -23,6 +23,6 @@ public class TechevAdditionsConfig {
                 .defineInRange("infinityCardDrain", 50, 0, Integer.MAX_VALUE);
 
         builder.pop();
-        CLIENT_CONFIG = builder.build();
+        SERVER_CONFIG = builder.build();
     }
 }
