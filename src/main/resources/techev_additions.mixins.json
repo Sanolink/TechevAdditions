@@ -12,6 +12,7 @@
     "botania.IPylonBlockEntityMixin",
     "botania.PylonBlockEntityMixin",
     "create.AirCurrentMixin",
+    "createdeco.RegistrationMixin",
     "industrialforegoing.FluidLaserBaseTileMixin",
     "industrialforegoing.ItemStackUtilsMixin",
     "industrialforegoing.JEICustomPluginMixin",

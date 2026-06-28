@@ -220,6 +220,9 @@ dependencies {
     // AE Infinity Booster
     implementation fg.deobf("curse.maven:aeinfinitybooster-559313:3940200")
 
+    // Create: Deco
+    implementation fg.deobf("curse.maven:create-deco-509285:4554164")
+
     // Jade
     //runtimeOnly(fg.deobf("curse.maven:jade-324717:4914105"))
 

@@ -119,3 +119,10 @@ TechEv || Additions is the heart of TechEv Modpacks Series. This mod is not mean
     versionRange = "[0,)"
     ordering = "AFTER"
     side = "BOTH"
+
+[[dependencies.techev_additions]]
+modId = "createdeco"
+mandatory = true
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"
