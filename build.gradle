@@ -173,17 +173,17 @@ dependencies {
     runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
 
     // Botania
-    implementation  fg.deobf("vazkii.botania:Botania:${botania_version}:api")
-    implementation  fg.deobf("vazkii.botania:Botania:${botania_version}:sources")
-    implementation  fg.deobf("vazkii.botania:Botania:${botania_version}")
+    implementation fg.deobf("vazkii.botania:Botania:${botania_version}:api")
+    implementation fg.deobf("vazkii.botania:Botania:${botania_version}:sources")
+    implementation fg.deobf("vazkii.botania:Botania:${botania_version}")
 
     // Patchouli
-    implementation  fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
-    implementation  fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
+    implementation fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
+    implementation fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
 
     // Curios
-    implementation  fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
-    implementation  fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
+    implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
+    implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
 
     //LibX
     annotationProcessor fg.deobf("org.moddingx:LibX:${mc_version}-${libx_version}")
@@ -223,6 +223,9 @@ dependencies {
     // Create: Deco
     implementation fg.deobf("curse.maven:create-deco-509285:4554164")
 
+    // No Tree Punching
+    implementation fg.deobf("curse.maven:no-tree-punching-289043:4125845")
+
     // Cataclysm
     implementation fg.deobf("curse.maven:cataclysm-551586:6470672")
 
@@ -230,7 +233,7 @@ dependencies {
     implementation fg.deobf("curse.maven:lionfish-api-1001614:5314835")
 
     // Jade
-    //runtimeOnly(fg.deobf("curse.maven:jade-324717:4914105"))
+    implementation(fg.deobf("curse.maven:jade-324717:4914105"))
 
     // Mekanism
     //runtimeOnly fg.deobf("mekanism:Mekanism:1.19.2-10.3.2.469")

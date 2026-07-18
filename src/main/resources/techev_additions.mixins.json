@@ -20,6 +20,9 @@
     "industrialforegoing.OreTitaniumFluidTypeMixin",
     "industrialforegoing.WashingFactoryTileMixin",
     "mythicbotany.MythicBotanyMixin",
+    "notreepunching.EventHandlerMixin",
+    "notreepunching.HarvestBlockHandlerAccessor",
+    "notreepunching.HarvestBlockHandlerMixin",
     "twilightforest.FieryBlockMixin"
   ],
   "server": [],
@@ -27,6 +30,7 @@
     "defaultRequire": 1
   },
   "client": [
-    "create.AirFlowParticleMixin"
+    "create.AirFlowParticleMixin",
+    "jade.HarvestToolProviderMixin"
   ]
 }

@@ -6,6 +6,9 @@ import com.sanolink.techev_additions.block.entity.TechevBlockEntities;
 import com.sanolink.techev_additions.item.TechevItems;
 
 import com.sanolink.techev_additions.block.TechevBlocks;
+import com.sanolink.techev_additions.command.TechEvCommands;
+import com.sanolink.techev_additions.event.ProgressionSyncHandler;
+import com.sanolink.techev_additions.network.TechEvNetwork;
 import com.sanolink.techev_additions.recipes.TechevRecipeTypes;
 import com.sanolink.techev_additions.recipes.create.TechevCreateRecipeTypes;
 import com.sanolink.techev_additions.recipes.create.TechevFanProcessingTypes;
@@ -48,6 +51,13 @@ public class TechevAdditions
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            TechEvNetwork.register();
+
+            MinecraftForge.EVENT_BUS.register(new ProgressionSyncHandler());
+            MinecraftForge.EVENT_BUS.register(new TechEvCommands());
+        });
+    }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
