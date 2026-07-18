@@ -223,6 +223,12 @@ dependencies {
     // Create: Deco
     implementation fg.deobf("curse.maven:create-deco-509285:4554164")
 
+    // Cataclysm
+    implementation fg.deobf("curse.maven:cataclysm-551586:6470672")
+
+    // Lionfish API
+    implementation fg.deobf("curse.maven:lionfish-api-1001614:5314835")
+
     // Jade
     //runtimeOnly(fg.deobf("curse.maven:jade-324717:4914105"))
 

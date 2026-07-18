@@ -126,3 +126,10 @@ mandatory = true
 versionRange = "[0,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.techev_additions]]
+modId = "cataclysm"
+mandatory = true
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"

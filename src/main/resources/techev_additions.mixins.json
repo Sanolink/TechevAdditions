@@ -11,6 +11,7 @@
     "botania.BlockEntityConstantsMixin",
     "botania.IPylonBlockEntityMixin",
     "botania.PylonBlockEntityMixin",
+    "cataclysm.DecoratedPotBlockEntityMixin",
     "create.AirCurrentMixin",
     "createdeco.RegistrationMixin",
     "industrialforegoing.FluidLaserBaseTileMixin",
