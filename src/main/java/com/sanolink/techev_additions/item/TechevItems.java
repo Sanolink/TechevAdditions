@@ -16,6 +16,7 @@ public class TechevItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TechevAdditions.MOD_ID);
     
     public static final RegistryObject<Item> TECHEVIUM = ITEMS.register("techevium", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB).rarity(Rarity.create("TECHEV", ChatFormatting.GOLD))));
+    public static final RegistryObject<Item> TECHEV_KEY = ITEMS.register("techev_key", () -> new TechEvKeyItem(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB).stacksTo(1).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> TELLURITE= ITEMS.register("tellurite", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> CHROMATIC = ITEMS.register("chromatic", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> EVOLIUM = ITEMS.register("evolium", () -> new Item(new Item.Properties().tab(TechevCreativeModeTab.TECHEV_TAB)));

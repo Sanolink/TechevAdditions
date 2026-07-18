@@ -7,6 +7,20 @@
     "item.techev_additions.raw_cuperzinate": "Raw Cuperzinate",
     "item.techev_additions.raw_leadosnite": "Raw Leadosnite",
     "item.techev_additions.raw_uratinumal": "Raw Uratinumal",
+    "item.techev_additions.techev_key": "TechEv Key",
+
+    "message.techev_additions.lootr_locked": "This container is sealed. You need the TechEv Key.",
+
+    "tooltip.techev_additions.techev_key.action": "Right-click to unlock normal mining.",
+    "tooltip.techev_additions.techev_key.explain1": "Until you do, you cannot break a block without the correct tool.",
+    "tooltip.techev_additions.techev_key.once": "You only need to do this once, and it lasts forever.",
+    "tooltip.techev_additions.techev_key.unlocked": "✔ Normal mining is unlocked.",
+    "tooltip.techev_additions.techev_key.keep": "Keep this key! You also need it to open loot chests.",
+
+    "message.techev_additions.key_used": "Normal mining unlocked! You can now break blocks without the correct tool.",
+    "message.techev_additions.key_already_used": "You have already unlocked normal mining.",
+
+    "curios.identifier.techev_key": "TechEv Key",
 
 
     "block.techev_additions.raw_leadosnite_block": "Raw Leadosnite Block",

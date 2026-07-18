@@ -226,6 +226,9 @@ dependencies {
     // No Tree Punching
     implementation fg.deobf("curse.maven:no-tree-punching-289043:4125845")
 
+    // Lootr
+    implementation fg.deobf("curse.maven:lootr-361276:5976195")
+
     // Cataclysm
     implementation fg.deobf("curse.maven:cataclysm-551586:6470672")
 
